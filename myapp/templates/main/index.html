@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1> Django-based web application</h1>
+        <nav>
+            <ul>
+                {% for c in course1 %}
+                <li><a href="{% url 'myapp:detail' c.pk %}">{{ c.instructor }}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>
+
+
+            
+       
